@@ -1,0 +1,30 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #252525;
+    font-family: sans-serif;
+    margin: 0%;
+    font-size: 12pt;
+    color: #84E6FC;
+}
+.master{
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: fit-content;
+}
+
+footer{
+    background-color: #1e1e1e;
+    padding: 10px;
+    height: fit-content;
+    right: 0px;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+}

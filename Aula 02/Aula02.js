@@ -1,14 +1,13 @@
 const valor1 = document.querySelector(".valor1");
-const valorTeste = document.querySelector(".valorTeste");
 const feelingLucky = document.querySelector('#feelingLucky');
 feelingLucky.addEventListener("click", testingLuck);
 const entrada = document.querySelector('#entrada');
 const luckyTip = document.querySelector('.luckyTip');
+// botão para gerar a variável aleatória
 // const luckyButton = document.querySelector('#luckyButton');
 // luckyButton.addEventListener("click", gettingLuck);
 var luckyCount = 0;
 var luckyCountMax = 10;
-// declarando o número a ser acertado
 
 var min = 1;
 var max = 10000;

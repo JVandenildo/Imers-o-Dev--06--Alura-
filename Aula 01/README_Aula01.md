@@ -6,7 +6,7 @@
 >> - tipos de variáveis, como texto e inteiro;  
 > - operadores;  
 > - arredondamento;  
->> - ficando a quantidade de casas decimais com a função `toFixed()`;  
+>> - fixando a quantidade de casas decimais com a função `toFixed()`;  
 > - console;  
 > - criar uma conta no CodePen;  
 > - Entender as diferenças entre HTML, CSS e JavaScript;  

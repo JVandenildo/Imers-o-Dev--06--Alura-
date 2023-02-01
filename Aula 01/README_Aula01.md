@@ -2,11 +2,11 @@
 >
 ## Conteúdo da aula   
 - variáveis  
-> - variáveis, manipulação dos valores armazenados e a memória do computador;  
-> - tipos de variáveis, como texto e inteiro;  
+    - variáveis, manipulação dos valores armazenados e a memória do computador;  
+    - tipos de variáveis, como texto e inteiro;  
 - operadores;  
 - arredondamento;  
-> - fixando a quantidade de casas decimais com a função `toFixed()`;  
+    - fixando a quantidade de casas decimais com a função `toFixed()`;  
 - console;  
 - criar uma conta no CodePen;  
 - Entender as diferenças entre HTML, CSS e JavaScript;  

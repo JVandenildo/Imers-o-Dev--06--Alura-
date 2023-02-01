@@ -13,13 +13,15 @@ body{
     top: 0;
     right: 0;
     padding: 0.5rem;
-    display: flex;
     height: fit-content;
     align-content: center;
 }
 h1, h2, h3, h4, h5, h6, input, button{
     font-family: 'Courier New', Courier, monospace;
     border-radius: 85px;
+}
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
 }
 button:hover{
     cursor: pointer;

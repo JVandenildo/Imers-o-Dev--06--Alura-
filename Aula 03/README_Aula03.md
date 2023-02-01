@@ -5,7 +5,7 @@
 - Utilizar o médoto `filmes.push("Nome do filme")` para inserir um novo elemento na lista (ou seja, um novo filme na array);  
 - Descobrir a quantidade de elementos em uma array com o método `array.length`;  
 - Selecionar elementos de uma array utlizando a sintaxe `array[número]`. Lembrando sempre que o primeiro índice começa com zero para o primeiro elemento;  
-Utilizar a instrução `for` para *iterar*, ou seja, percorrer todos os elementos de uma array;  
+    - Utilizar a instrução `for` para *iterar*, ou seja, percorrer todos os elementos de uma array;  
 - Criar uma array com imagens de pôsteres de alguns filmes;  
 - Montar a lógica do programa que vai iterar esta array de filmes e exibir cada um deles na tela, integrando o `for` do JavaScript com `document.write()`.  
   

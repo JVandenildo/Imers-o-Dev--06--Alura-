@@ -13,6 +13,7 @@ body{
     top: 0;
     right: 0;
     padding: 0.5rem;
+    display: flex;
     height: fit-content;
     align-content: center;
 }
@@ -53,10 +54,14 @@ a:link{
     font-weight: bold;
 }
 .displayItems{
-    padding: 0.5rem;
+    padding: 1.5rem;
     margin: auto;
     width: fit-content;
     height: fit-content;
-    align-content: center;
-    justify-items: center;
+    text-align: center;
+}
+.displayItems img{
+    max-height: 20rem;
+    max-width: 20rem;
+    margin: 1rem;
 }

@@ -5,11 +5,23 @@ buttonUser.addEventListener("click", addItem);
 const displayItems = document.querySelector('.displayItems');
 
 function addItem(){
-    if(inputItem.value == "" || inputNome.value == ""){
-        displayItems.innerHTML = `Insira valores válidos nos dois campos!`;
+    var listaCoisas = [];
+    var nomeCoisas = [];
+
+    if(inputItem.value == "" || inputNome.value == "" || inputItem.value.toLowerCase().endsWith(".jpg") == false){
+        displayItems.innerHTML = `Insira valores válidos nos dois campos!<br>Aceito imagens no formato \'.jpg\'.`;
+        // resetar valores dos inputs
+        inputItem.value = "";
+        inputNome.value = "";
     }
     else{
-        displayItems.innerHTML = `Insira valores válidos nos dois campos!`;
+        listaCoisas.push(inputItem.value);
+        nomeCoisas.push(inputNome.value.toUpperCase());
+        displayItems.insertAdjacentHTML("beforeend", `${nomeCoisas[nomeCoisas.length - 1]}<img src="${listaCoisas[listaCoisas.length - 1]}">`);
+
+        // resetar valores dos inputs
+        inputItem.value = "";
+        inputNome.value = "";
     }
 }
 

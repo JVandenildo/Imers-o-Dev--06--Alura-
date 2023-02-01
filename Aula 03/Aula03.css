@@ -13,13 +13,50 @@ body{
     top: 0;
     right: 0;
     padding: 0.5rem;
-    margin: auto;
     height: fit-content;
     align-content: center;
 }
 h1, h2, h3, h4, h5, h6, input, button{
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 85px;
 }
 button:hover{
     cursor: pointer;
+}
+a:link{
+    color: #46D7FF;
+    text-decoration: none;
+}a:visited{
+    color: #959780;
+    text-decoration: none;
+}
+
+.divUser{
+    padding: 0.8rem;
+    background: #1e1e1e;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 85px;
+    margin: auto;
+    align-content: center;
+    justify-items: center;
+}
+#inputItem, #inputNome{
+    background: #d5be94;
+    padding: 0.8rem;
+    margin: 0.2rem;
+}
+#buttonUser{
+    background: #f1f012;
+    padding: 0.8rem;
+    margin: 0.2rem;
+    font-weight: bold;
+}
+.displayItems{
+    padding: 0.5rem;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    align-content: center;
+    justify-items: center;
 }

@@ -20,6 +20,14 @@ body{
 h1, h2, h3, h4, h5, h6, input, button{
     font-family: 'Courier New', Courier, monospace;
 }
+a:link{
+    color: #46D7FF;
+    text-decoration: none;
+}a:visited{
+    color: #959780;
+    text-decoration: none;
+}
+
 button:hover{
     cursor: pointer;
 }

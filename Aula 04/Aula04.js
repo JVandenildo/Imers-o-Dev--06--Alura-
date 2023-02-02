@@ -3,10 +3,14 @@ const inputItem = document.querySelector('#inputItem');
 const buttonUser = document.querySelector('#buttonUser');
 buttonUser.addEventListener("click", addItem);
 const displayItems = document.querySelector('.displayItems');
+const clearAllButton = document.querySelector('#clearAllButton');
+clearAllButton.addEventListener("click", clearAll);
+
+
+var listaCoisas = [];
+var nomeCoisas = [];
 
 function addItem(){
-    var listaCoisas = [];
-    var nomeCoisas = [];
 
     if(inputItem.value == "" || inputNome.value == "" || inputItem.value.toLowerCase().endsWith(".jpg") == false){
         alert(`Insira valores válidos nos dois campos! Aceito imagens no formato \'.jpg\'.`);
@@ -28,5 +32,20 @@ function addItem(){
         inputItem.value = "";
         inputNome.value = "";
     }
+    return true;
 }
 
+function clearItem(listaCoisas, nomeCoisas){
+    ;
+}
+
+function clearAll(listaCoisas, nomeCoisas){
+    listaCoisas.length = 0;
+    nomeCoisas.length = 0;
+
+    displayItems.innerHTML = `Está a procura de que?`;
+    inputItem.value = "";
+    inputNome.value = "";
+    
+    return true;
+}

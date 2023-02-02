@@ -14,7 +14,7 @@ function addItem(){
 
     if(inputItem.value == "" || inputNome.value == "" || inputItem.value.toLowerCase().endsWith(".jpg") == false){
         alert(`Insira valores válidos nos dois campos! Aceito imagens no formato \'.jpg\'.`);
-        // resetar valores dos inputs
+        // reset valores dos inputs
         inputItem.value = "";
         inputNome.value = "";
     }
@@ -26,20 +26,24 @@ function addItem(){
         nomeCoisas.push(inputNome.value.toUpperCase());
         let strngNome = `${nomeCoisas[nomeCoisas.length - 1]}`;
         let imgCoisas = `<img src="${listaCoisas[listaCoisas.length - 1]}"></img>`;
-        displayItems.insertAdjacentHTML("beforeend", strngNome + imgCoisas);
+        let clearItemButton = `<button onclick="clearItem()">REMOVER</button>`;
+        displayItems.insertAdjacentHTML("beforeend", strngNome + imgCoisas + clearItemButton);
 
-        // resetar valores dos inputs
+        // reset valores dos inputs
         inputItem.value = "";
         inputNome.value = "";
     }
     return true;
 }
 
-function clearItem(listaCoisas, nomeCoisas){
-    ;
+function clearItem(){
+    listaCoisas.pop(inputItem.value);
+    nomeCoisas.pop(inputNome.value);
+
+    return true;
 }
 
-function clearAll(listaCoisas, nomeCoisas){
+function clearAll(){
     listaCoisas.length = 0;
     nomeCoisas.length = 0;
 

@@ -11,7 +11,7 @@ O projeto da aula anteior será refatorado para continuar integrando o HTML e o 
 - Usando o JavaScript para acessar o que está sendo exibido na tela e pegar valores digitados pelo usuário com `getElementById()` e `.value`;  
 - Passar informação que as funções precisam para funcionar, através dos parâmetros;  
 - Utilizar o `.endsWith()` para berificar se um texto termina com determinados caracteres;  
-- Ver mais um exemplo de reatribuição de variável para "limpar" o texto do campo com `\"\"`.  
+- Ver mais um exemplo de reatribuição de variável para "limpar" o texto do campo com `""`.  
 
 ## Desafios da aula  
   

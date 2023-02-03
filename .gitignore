@@ -3,3 +3,6 @@
 
 # ignoring all .pdf files
 *.pdf
+
+# ignoring workspace settings
+.vscode/

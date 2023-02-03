@@ -1,4 +1,4 @@
-body, html{
+html{
     width: 100%;
     height: 100%;
 }
@@ -16,11 +16,8 @@ body{
     height: fit-content;
     align-content: center;
 }
-h1, h2, h3, h4, h5, h6, input, button{
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 85px;
-}
 h1, h2, h3, h4, h5, h6{
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 button:hover{
@@ -32,4 +29,20 @@ a:link{
 }a:visited{
     color: #959780;
     text-decoration: none;
+}
+input{
+    background: #d5be94;
+    padding: 0.8rem;
+    max-height: 2rem;
+}
+button{
+    font-weight: bolder;
+    font-family: bitter, bree-serif;
+    background: yellow;
+    padding: 0.8rem;
+    overflow: visible;
+}
+
+.participantes{
+    margin: 2rem;
 }

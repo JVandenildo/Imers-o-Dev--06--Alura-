@@ -1,7 +1,7 @@
 # Aula 04  
   
 Nesta aula é utilizado o *input* como entrada, para que a entrada dos dados não seja através do código ou console, mas na tela.  
-O projeto da aula anteior será refatorado para continuar integrando o HTML e o JavaScript, fazendo com que as partes certas do programa funcionem no momento correto.  
+O projeto da aula anterior será refatorado para continuar integrando o HTML e o JavaScript, fazendo com que as partes certas do programa funcionem no momento correto.  
 
 ## Conteúdo da aula  
   
@@ -10,7 +10,7 @@ O projeto da aula anteior será refatorado para continuar integrando o HTML e o 
 - Condicionando a execução (ou "chamada") de uma função a um clique em um botão na tela;  
 - Usando o JavaScript para acessar o que está sendo exibido na tela e pegar valores digitados pelo usuário com `getElementById()` e `.value`;  
 - Passar informação que as funções precisam para funcionar, através dos parâmetros;  
-- Utilizar o `.endsWith()` para berificar se um texto termina com determinados caracteres;  
+- Utilizar o `.endsWith()` para verificar se um texto termina com determinados caracteres;  
 - Ver mais um exemplo de reatribuição de variável para "limpar" o texto do campo com `""`.  
 
 ## Desafios da aula  

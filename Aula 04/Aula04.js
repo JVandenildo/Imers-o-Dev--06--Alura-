@@ -37,8 +37,8 @@ function addItem(){
 }
 
 function clearItem(){
-    listaCoisas.pop(inputItem.value);
-    nomeCoisas.pop(inputNome.value);
+    listaCoisas.pop();
+    nomeCoisas.pop();
 
     return true;
 }

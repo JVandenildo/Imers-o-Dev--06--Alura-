@@ -45,16 +45,40 @@ function mostrarJogador(){
     switch (jogadoresNomes.length) {
         case 1:
             Jogador01.nome = jogadoresNomes[0];
-            participantes.insertAdjacentHTML("beforeend", Jogador01.nome);
+            var table = `<table>
+            <tr>
+                <td>Nome: ${Jogador01.nome}</td><td>Pontos: ${Jogador01.pontos}</td><td>Acertos: ${Jogador01.acertos}</td><td>Erros: ${Jogador01.erros}</td>
+            </tr>
+        </table>`;
+            participantes.insertAdjacentHTML("beforeend", table);
             break;
     
         case 2:
             Jogador02.nome = jogadoresNomes[1];
-            participantes.insertAdjacentHTML("beforeend", Jogador02.nome);
+            var table = `<table>
+            <tr>
+                <td>Nome: ${Jogador01.nome}</td><td>Pontos: ${Jogador01.pontos}</td><td>Acertos: ${Jogador01.acertos}</td><td>Erros: ${Jogador01.erros}</td>
+            </tr>
+            <tr>
+                <td>Nome: ${Jogador02.nome}</td><td>Pontos: ${Jogador02.pontos}</td><td>Acertos: ${Jogador02.acertos}</td><td>Erros: ${Jogador02.erros}</td>
+            </tr>
+        </table>`;
+            participantes.insertAdjacentHTML("beforeend", table);
             break;
         case 3:
             Jogador03.nome = jogadoresNomes[2];
-            participantes.insertAdjacentHTML("beforeend", Jogador03.nome);
+            var table = `<table>
+            <tr>
+                <td>Nome: ${Jogador01.nome}</td><td>Pontos: ${Jogador01.pontos}</td><td>Acertos: ${Jogador01.acertos}</td><td>Erros: ${Jogador01.erros}</td>
+            </tr>
+            <tr>
+                <td>Nome: ${Jogador02.nome}</td><td>Pontos: ${Jogador02.pontos}</td><td>Acertos: ${Jogador02.acertos}</td><td>Erros: ${Jogador02.erros}</td>
+            </tr>
+            <tr>
+                <td><b>Nome:</b> ${Jogador03.nome}</td><td><b>Pontos:</b> ${Jogador03.pontos}</td><td><b>Acertos:</b> ${Jogador03.acertos}</td><td><b>Erros:</b> ${Jogador03.erros}</td>
+            </tr>
+        </table>`;
+            participantes.insertAdjacentHTML("beforeend", table);
             break;
     }
 }

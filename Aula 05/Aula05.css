@@ -58,3 +58,13 @@ button{
     display: flex;
     padding: 0.5rem;
 }
+
+table{
+    padding: 0.5rem;
+}
+tr{
+    padding: 0.3rem;
+}
+td{
+    padding: 0.2rem;
+}

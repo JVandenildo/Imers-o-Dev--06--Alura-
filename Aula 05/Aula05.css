@@ -43,6 +43,18 @@ button{
     outline: none;
 }
 
+.inputUser{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+}
+
 .participantes{
     margin: 2rem;
+}
+.jogo{
+    display: flex;
+    padding: 0.5rem;
 }

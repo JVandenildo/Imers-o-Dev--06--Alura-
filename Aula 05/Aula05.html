@@ -13,12 +13,15 @@
             <!-- Code goes here!-->
             <h1>Rankeamento dos Participantes</h1>
             <div class="inputUser">
-                <input type="text" id="player" placeholder="PLAYER">
+                <input type="text" id="player" placeholder="JOGADOR">
                 <button id="insertPlayer">INSERIR JOGADOR</button>
                 <button id="removePlayers">REMOVER JOGADORES</button>
             </div>
-            <p id="aviso">ATENÇÃO: máximo de 4 jogadores.</p>
+            <p id="aviso">A quantidade máxima de jogadores é 3.</p>
             <div class="participantes"></div>
+            <div class="jogo">
+                <button onclick="limparJogadores()">ACERTEI</button>
+            </div>
         </div>
         <script type="text/javascript" src="Aula05.js"></script>
     </body>

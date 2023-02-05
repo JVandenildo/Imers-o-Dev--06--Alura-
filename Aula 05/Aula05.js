@@ -125,11 +125,11 @@ function acertei(jogador){
     jogador.acertos = jogador.acertos + 1;
     jogador.pontos = jogador.pontos + 2;
 
-    alert(`${jogador.nome}${jogador.acertos}`);
+    console.log(`${jogador}`);
 }
 
 function errei(jogador){
     jogador.erros = jogador.erros + 1;
 
-    alert(`${jogador.nome}${jogador.erros}`);
+    console.log(`${jogador}`);
 }

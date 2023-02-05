@@ -13,16 +13,12 @@ function inserirJogador(){
     }else{
         jogadoresNomes.push(capitalLetter(player.value));
         var quantidadeJogadores = jogadoresNomes.length;
-        // var listaJogadores = "";
 
         if(quantidadeJogadores == 1){
             participantes.innerHTML = `Tem ${quantidadeJogadores} pessoa jogando.<br>É ela:<br>`;
             mostrarJogador();
         }
         else if(quantidadeJogadores == 3){
-            // for(let pessoas in jogadoresNomes){
-            //     listaJogadores = listaJogadores + `${jogadoresNomes[pessoas]}.`;
-            // }
             participantes.innerHTML = `Já tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
             mostrarJogador();
             insertPlayer.removeEventListener("click", inserirJogador);
@@ -31,9 +27,6 @@ function inserirJogador(){
             insertPlayer.addEventListener("click", limpaValue);
         }
         else{
-            // for(let pessoas in jogadoresNomes){
-            //     listaJogadores = listaJogadores + `${jogadoresNomes[pessoas]}.`;
-            // }
             participantes.innerHTML = `Tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
             mostrarJogador();
         }

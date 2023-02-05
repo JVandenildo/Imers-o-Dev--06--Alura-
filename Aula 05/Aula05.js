@@ -1,35 +1,39 @@
 const participantes = document.querySelector('.participantes');
-const player = document.querySelector('#player');
-const insertPlayer = document.querySelector('#insertPlayer');
-const removePlayers = document.querySelector('#removePlayers');
+const Jogador = document.querySelector('#Jogador');
+const inserirJogadorBtn = document.querySelector('#inserirJogadorBtn');
+const removeJogadorBtn = document.querySelector('#removeJogadorBtn');
 const aviso = document.querySelector('#aviso');
 
 var jogadoresNomes = [];
 
-insertPlayer.addEventListener("click", inserirJogador);
+inserirJogadorBtn.addEventListener("click", inserirJogador);
 function inserirJogador(){
-    if(player.value == ""){
-        alert('Insira um valor válido!');
-    }else{
-        jogadoresNomes.push(capitalLetter(player.value));
-        var quantidadeJogadores = jogadoresNomes.length;
+    switch (Jogador.value) {
+        case "":
+            alert('Insira um valor válido!');
+            break;
+    
+        default:
+            jogadoresNomes.push(letraMaiúscula(Jogador.value));
+            var quantidadeJogadores = jogadoresNomes.length;
 
-        if(quantidadeJogadores == 1){
-            participantes.innerHTML = `Tem ${quantidadeJogadores} pessoa jogando.<br>É ela:<br>`;
-            mostrarJogador();
-        }
-        else if(quantidadeJogadores == 3){
-            participantes.innerHTML = `Já tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
-            mostrarJogador();
-            insertPlayer.removeEventListener("click", inserirJogador);
-            insertPlayer.style.background = "#959780";
-            
-            insertPlayer.addEventListener("click", limpaValue);
-        }
-        else{
-            participantes.innerHTML = `Tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
-            mostrarJogador();
-        }
+            if(quantidadeJogadores == 1){
+                participantes.innerHTML = `Tem ${quantidadeJogadores} pessoa jogando.<br>É ela:<br>`;
+                mostrarJogador();
+            }
+            else if(quantidadeJogadores == 3){
+                participantes.innerHTML = `Já tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
+                mostrarJogador();
+                inserirJogadorBtn.removeEventListener("click", inserirJogador);
+                inserirJogadorBtn.style.background = "#959780";
+                
+                inserirJogadorBtn.addEventListener("click", limpaValue);
+            }
+            else{
+                participantes.innerHTML = `Tem ${quantidadeJogadores} pessoas jogando.<br>São elas:<br>`;
+                mostrarJogador();
+            }
+            break;
     }
     return limpaValue();
 }
@@ -44,6 +48,7 @@ function mostrarJogador(){
             </tr>
         </table>`;
             participantes.insertAdjacentHTML("beforeend", table);
+
             break;
     
         case 2:
@@ -57,6 +62,7 @@ function mostrarJogador(){
             </tr>
         </table>`;
             participantes.insertAdjacentHTML("beforeend", table);
+
             break;
         case 3:
             Jogador03.nome = jogadoresNomes[2];
@@ -72,6 +78,7 @@ function mostrarJogador(){
             </tr>
         </table>`;
             participantes.insertAdjacentHTML("beforeend", table);
+
             break;
     }
 }
@@ -97,39 +104,55 @@ var Jogador03 = {
 }
 
 
-removePlayers.addEventListener("click", limparJogadores);
+removeJogadorBtn.addEventListener("click", limparJogadores);
 function limparJogadores(){
     if(jogadoresNomes.length > 0){
         participantes.innerHTML = "Jogadores removidos.";
-        insertPlayer.removeEventListener("click", limpaValue);
-        insertPlayer.addEventListener("click", inserirJogador);
-        insertPlayer.style.background = "yellow";
+        inserirJogadorBtn.removeEventListener("click", limpaValue);
+        inserirJogadorBtn.addEventListener("click", inserirJogador);
+        inserirJogadorBtn.style.background = "yellow";
         jogadoresNomes.length = 0;
+
         return limpaValue();
     }else{
         alert("Não tem jogador para ser removido.");
+
         return limpaValue();
     }
 }
 
 function limpaValue(){
-    return player.value = "";
+    return Jogador.value = "";
 }
 
 // uppercase the first letter
-function capitalLetter(string){
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function letraMaiúscula(nome){
+    return nome.charAt(0).toUpperCase() + nome.slice(1);
 }
 
 function acertei(jogador){
-    jogador.acertos = jogador.acertos + 1;
+    jogador.acertos++;
     jogador.pontos = jogador.pontos + 2;
+    switch (jogador.nome) {
+        case jogadoresNomes[0]:
+            Jogador02.erros++;
+            Jogador03.erros++;
+            break;
+        case jogadoresNomes[1]:
+            Jogador01.erros++;
+            Jogador03.erros++;
+            break;
+        case jogadoresNomes[2]:
+            Jogador01.erros++;
+            Jogador02.erros++;
+            break;
+    }
 
     console.log(`${jogador}`);
 }
 
 function errei(jogador){
-    jogador.erros = jogador.erros + 1;
+    jogador.erros++;
 
     console.log(`${jogador}`);
 }

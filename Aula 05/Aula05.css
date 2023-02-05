@@ -30,13 +30,13 @@ a:link{
     color: #959780;
     text-decoration: none;
 }
-input{
+.inputUser input{
     background: #d5be94;
     padding: 0.5rem;
     outline: none;
     margin: 0 0.2rem;
 }
-button{
+.inputUser button{
     font-weight: bolder;
     font-family: bitter, bree-serif;
     background: yellow;

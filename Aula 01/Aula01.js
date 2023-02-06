@@ -1,10 +1,10 @@
 const valor1 = document.querySelector('#valor1');
 const valor2 = document.querySelector('.valor2');
 const valor3 = document.querySelector('.valor3');
-const convertCurr = document.querySelector('#converter');
-convertCurr.addEventListener("click", converterCurr);
+const conversorMoedaBtn = document.querySelector('#conversorBtn');
+conversorMoedaBtn.addEventListener("click", converterMoeda);
 
-function converterCurr(){
+function converterMoeda(){
     let taxaDollar = 5.12; // USD
     let taxaEuro = 5.55; // €
     let taxaBitCoins = 0.0000086; // BTC
@@ -23,19 +23,23 @@ function converterCurr(){
 const valorTemp = document.querySelector('#valorTemp');
 const temp2 = document.querySelector('.temp2');
 const temp3 = document.querySelector('.temp3');
-const convertTemp = document.querySelector('#convertemp');
-convertTemp.addEventListener("click", converterTemp);
+const converTempBtn = document.querySelector('#converTempBtn');
+converTempBtn.addEventListener("click", converterTemp);
 function converterTemp(){
     const CemFah = (parseInt(valorTemp.value) * 1.8) + 32;
     const CemK = parseInt(valorTemp.value) + 273;
 
-    if(valorTemp.value == String){
-        temp2.innerHTML = `Retorne um valor em número.`;
-        valorTemp.value = "";
-    }
-    else{
-        temp2.innerHTML = `${valorTemp.value}°C equivale a ${CemFah} °F.`;
-        temp3.innerHTML = `${valorTemp.value}°C equivale a ${CemK} K.`;
-        valorTemp.value = "";
+    switch (valorTemp.value) {
+        case String:
+            temp2.innerHTML = `Retorne um valor em número.`;
+            valorTemp.value = "";
+            
+            break;
+    
+        default:
+            temp2.innerHTML = `${valorTemp.value}°C equivale a ${CemFah} °F.`;
+            temp3.innerHTML = `${valorTemp.value}°C equivale a ${CemK} K.`;
+            valorTemp.value = "";
+            break;
     }
 }

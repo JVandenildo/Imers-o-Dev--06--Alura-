@@ -19,6 +19,7 @@ body{
 h1, h2, h3, h4, h5, h6, input, button{
     font-family: 'Courier New', Courier, monospace;
     border-radius: 85px;
+    padding: 0.5rem;
 }
 h1, h2, h3, h4, h5, h6{
     text-align: center;
@@ -44,25 +45,25 @@ a:link{
     align-content: center;
     justify-items: center;
 }
-#inputItem, #inputNome{
+#entradaItem, #entradaNome{
     background: #d5be94;
     padding: 0.8rem;
     margin: 0.2rem;
 }
-#buttonUser{
+#botãoInserir{
     background: #f1f012;
     padding: 0.8rem;
     margin: 0.2rem;
     font-weight: bold;
 }
-.displayItems{
+.vitrineItens{
     padding: 1.5rem;
     margin: auto;
     width: fit-content;
     height: fit-content;
     text-align: center;
 }
-.displayItems img{
+.vitrineItens img{
     max-height: 20rem;
     max-width: 20rem;
     margin: 1rem;
